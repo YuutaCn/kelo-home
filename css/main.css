@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap&subset=cyrillic");
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+* {
   margin: 0;
   padding: 0;
   border: 0;
@@ -73,6 +73,7 @@ a:hover {
 
 * {
   outline: none !important;
+  position: relative;z-index: 1;
 }
 
 .mob-menu {
@@ -281,11 +282,23 @@ select::-ms-expand {
 }
 
 header {
+  position: relative;
   background: url("../images/header.webp") no-repeat bottom center;
   min-height: 1500px;
   -webkit-background-size: cover;
   background-size: cover;
   padding-top: 25px;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;left: 0;
+  background: #ffffff45;
+  backdrop-filter: blur(2px);
+  z-index: 0;
 }
 
 @media (max-width: 500px) {
@@ -306,6 +319,7 @@ header .top {
   -ms-flex-align: center;
   align-items: center;
   padding-bottom: 25px;
+  position: relative;z-index: 1;
 }
 
 @media (max-width: 767px) {
@@ -378,7 +392,9 @@ header .top .phone {
 header .top .phone a {
   display: block;
   font-size: 20px;
-  color: #192228;
+  color: #000000;
+  font-family: 'Lora', serif;
+  font-weight: bold;
 }
 
 header .top .phone span {
@@ -391,6 +407,7 @@ header .bottom h1 {
   font-weight: bold;
   font-size: 48px;
   margin-bottom: 30px;
+  color: #000;
 }
 
 @media (max-width: 1200px) {
@@ -423,7 +440,7 @@ header .bottom h1 {
 }
 
 header .bottom h3 {
-  color: #363C40;
+  color: #000;
   font-size: 26px;
   margin-bottom: 120px;
 }
@@ -517,12 +534,13 @@ header .bottom .desk .podarok i {
   justify-content: space-between;
   font-family: 'Lora', serif;
   font-style: italic;
+  font-weight: bold;
   font-size: 18px;
 }
 
 .menu ul li a {
-  color: #4D5E67;
-  border-bottom: 1px dashed #4D5E67;
+  color: #000;
+  border-bottom: 1px dashed #000;
   display: inline-block;
   padding-bottom: 3px;
   font-size: 18px;
@@ -2684,6 +2702,6 @@ footer .flex a {
   }
 }
 
-.lanensky {
-  background: url(https://lanensky.ru/);
+.modal {
+  z-index: 10000;
 }
