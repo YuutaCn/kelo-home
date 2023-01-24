@@ -1944,7 +1944,7 @@ input[type="text"]:-ms-input-placeholder {
 
 .dover .flex .desk>ul li span, .dover .flex .desk>ul li a {
   color: #192228;
-  font-size: 20px;
+  font-size: 19px;
 }
 
 @media (max-width: 500px) {
@@ -2711,4 +2711,19 @@ footer .flex a {
 
 .modal {
   z-index: 10000;
+}
+
+.ymaps-2-1-79-map {
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.ymaps-2-1-79-balloon__layout {
+  position: relative;
+  z-index: 100;
+}
+
+.ymaps-2-1-79-controls-pane,
+.ymaps-2-1-79-copyrights-pane {
+  display: none;
 }

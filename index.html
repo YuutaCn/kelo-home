@@ -7,8 +7,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Содержимое мета-тега «description». Вписываем текст от 150 до 250 символов">
   <meta name="keywords" content>
-  <link rel="stylesheet" href="css/libs.min.css">
-  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.webp">
   <link rel="icon" type="image/webp" sizes="32x32" href="favicon/favicon-32x32.webp">
@@ -26,7 +24,7 @@
     <div class="container">
       <div class="top">
         <div class="logo">
-          <img src="images/logo.webp" alt="Логотип Kelo Home">
+          <img src="images/logo.webp" alt="Логотип Kelo Home" width="180" height="127">
         </div>
         <div class="los"></div>
         <div class="phone"><a href="tel:+74991131320">+7 (499) 113 13 20</a></div>
@@ -263,8 +261,7 @@
       <div class="flex">
         <div class="desk">
           <ul>
-            <li style="display:none"><i class="icon-s-cnt-1"></i><small>Адрес:</small><span>Москва, ул. Александры Монаховой, 7А
-                офиса</span></li>
+            <li><i class="icon-s-cnt-1"></i><small>Адрес:</small><span>Москва, ул. Александры Монаховой, 7А</span></li>
             <li><i class="icon-s-cnt-2"></i><small>Тел.:</small><span><a href="tel:+74991131320">+7 (499) 113 13 20</a></span></li>
             <li><i class="icon-s-cnt-3"></i><small>Email:</small><span><a
                   href="mailto:info@kelohome.ru">info@kelohome.ru</a></span></li>
@@ -277,9 +274,7 @@
           </div>
         </div>
         <div class="map nomap" id="map">
-          <!-- <script type="text/javascript" charset="utf-8" async
-            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1cc54a5b9dd0860a1b1daaf537384c5e180a2ae0dcee99b4d994b0f45c79bb39&amp;width=100%&amp;height=100%&amp;lang=ru_UA&amp;scroll=true"></script> -->
-            <script charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2f3bc407f01db228b618edd58a7908176915a52db1e09f247fb698db4a9ea9bc&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+            <!-- <script charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2f3bc407f01db228b618edd58a7908176915a52db1e09f247fb698db4a9ea9bc&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script> -->
         </div>
       </div>
     </div>
@@ -287,7 +282,7 @@
   <footer>
     <div class="container">
       <div class="flex">
-        <div class="logo"><img src="images/logo.webp" alt="логотип Kelo Home" width="180" height="127"></div>
+        <div class="logo"><img src="images/logo.webp" alt="логотип Kelo Home" width="160" height="127" style="height: auto;"></div>
         <div class="los">СТРОИМ МНОГО! 1000+ загородных домов</div>
       </div>
     </div>
@@ -522,11 +517,15 @@
         </div>
       </div>
     </div>
-  </div> -->
-  <script src="js/libs.min.js"></script>
-  <script src="js/jquery.fancybox.min.js"></script>
-  <script src="js/common.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+  </div>
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <script defer src="js/libs.min.js"></script>
+  <script defer src="js/jquery.fancybox.min.js"></script>
+  <script defer src="js/common.js"></script>
+  <!-- <script defer src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<вашAPI-ключ>"></script> -->
+  <script defer src="js/map.js"></script>
 </body>
 
 </html>
