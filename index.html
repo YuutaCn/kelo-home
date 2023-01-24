@@ -3,14 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Строительство домов из СИП панелей под ключ по всей России</title>
+  <title>Строительство домов из кело под ключ по всей России</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Содержимое мета-тега «description». Вписываем текст от 150 до 250 символов">
   <meta name="keywords" content>
-  <link rel="stylesheet" type="text/css" href="css/libs.min.css">
-  <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/main.css">
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.webp">
   <link rel="icon" type="image/webp" sizes="32x32" href="favicon/favicon-32x32.webp">
   <link rel="icon" type="image/webp" sizes="16x16" href="favicon/favicon-16x16.webp">
@@ -31,16 +30,15 @@
         </div>
         <div class="los"></div>
         <div class="phone"><a href="tel:+74991131320">+7 (499) 113 13 20</a></div>
-        <a class="btn_yell" href="#callback" data-toggle="modal">Получить консультацию</a>
+        <a class="btn_yell yak" href="#dover">Получить консультацию</a>
       </div>
       <nav class="menu">
         <ul>
-          <li><a class="yak" href="home">Главная</a></li>
+          <li><a class="yak" href="/">Главная</a></li>
           <li><a class="yak" href="#god">О нас</a></li>
-          <li><a class="yak" href="#project">Материалы</a></li>
-          <li><a class="yak" href="#priem">Достижения</a></li>
-          <li><a class="yak" href="#sem">Галерея</a></li>
-          <li><a class="yak" href="#sem">Отзывы</a></li>
+          <li><a class="yak" href="#project">Услуги</a></li>
+          <li><a class="yak" href="#priem">Преимущества</a></li>
+          <li><a class="yak" href="#gal">Галерея</a></li>
           <li><a class="yak" href="#dover">Контакты</a></li>
         </ul>
       </nav>
@@ -48,7 +46,7 @@
         <h1>Строительство домов и бань из кело</h1>
         <h3>Изготавливаем из карельской сосны срубы деревянных домов и бань по проектам заказчика. Так же наши архитекторы могут помочь в проектировке дома/дачи, дизайне и отделке.</h3>
         <div class="desk">
-          <p>Получите персональный расчет стоимости строительства дома вашей мечты</p><a class="btn_red" href="#qwiz" data-toggle="modal">Заказать расчет</a>
+          <p>Получите персональный расчет стоимости строительства дома вашей мечты</p><a class="btn_red yak" href="#dover">Заказать расчет</a>
         </div>
       </div>
     </div>
@@ -83,8 +81,7 @@
                   <div class="title">3D-ВИЗУАЛИЗАЦИЯ</div>
                   <img src="images/add_services/1.webp" alt="visualization" width="250" height="150" loading="lazy">
                   <p class="opisanie">Разработка 3D модели дома</p>
-                  <div class="price">450 ₽/кв.м</div><a class="btn_yellow" href="#callback"
-                    data-toggle="modal">Заказать</a>
+                  <div class="price">450 ₽/кв.м</div><a class="btn_yellow yak" href="#dover">Заказать</a>
                 </div>
               </div>
               <div class="item">
@@ -92,8 +89,7 @@
                   <div class="title">РАЗРАБОТКА ДИЗАЙНА ИНТЕРЬЕРА</div>
                   <img src="images/add_services/2.webp" alt="visualization" width="250" height="150" loading="lazy">
                   <p class="opisanie">Разработка дизайна по вашим предпочтениям</p>
-                  <div class="price">550 ₽/кв.м</div><a class="btn_yellow" href="#callback"
-                    data-toggle="modal">Заказать</a>
+                  <div class="price">550 ₽/кв.м</div><a class="btn_yellow yak" href="#dover">Заказать</a>
                 </div>
               </div>
               <div class="item">
@@ -101,8 +97,7 @@
                   <div class="title">ДЕКОРИРОВАНИЕ</div>
                   <img src="images/add_services/3.webp" alt="visualization" width="250" height="150" loading="lazy">
                   <p class="opisanie">Проработка дизайна, подборка материалов от мебели до светильников</p>
-                  <div class="price">600 ₽/кв.м</div><a class="btn_yellow" href="#callback"
-                    data-toggle="modal">Заказать</a>
+                  <div class="price">600 ₽/кв.м</div><a class="btn_yellow yak" href="#dover">Заказать</a>
                 </div>
               </div>
               <div class="item">
@@ -110,8 +105,7 @@
                   <div class="title">ЛАНДШАВТНЫЙ ДИЗАЙН</div>
                   <img src="images/add_services/4.webp" alt="visualization" width="250" height="150" loading="lazy">
                   <p class="opisanie">Разработка концепта + создание</p>
-                  <div class="price">4500 ₽/кв.м</div><a class="btn_yellow" href="#callback"
-                    data-toggle="modal">Заказать</a>
+                  <div class="price">4500 ₽/кв.м</div><a class="btn_yellow yak" href="#dover">Заказать</a>
                 </div>
               </div>
             </div>
@@ -120,7 +114,7 @@
       </div>
     </div>
   </div>
-  <div class="gal">
+  <div class="gal" id="gal">
     <div class="container">
       <h2 class="title"><span>Фотографии</span> уже построенных обьектов</h2>
       <div class="flex">
@@ -163,7 +157,7 @@
           <div class="vosk">
             <img src="images/gusts_warn.webp" alt="warning" width="40" height="40" loading="lazy" class="vosk-warn">
             <span>Кстати, мы и сами живем<br>в построенных нами домах</span>
-          </div><a class="btn_red" href="#contact" data-toggle="modal">Хочу экскурсию!</a>
+          </div><a class="btn_red yak" href="#dover">Хочу экскурсию!</a>
         </div>
         <img src="images/guest.webp" alt="дом из кело" loading="lazy" width="300" height="250" class="guest__images">
       </div>
@@ -204,7 +198,7 @@
           </div>
         </div>
       </div>
-      <a href="#" class="priem__btn">ЗАКАЗАТЬ ПРОЕКТ</a>
+      <a href="#dover" class="priem__btn yak">ЗАКАЗАТЬ ПРОЕКТ</a>
     </div>
   </div>
   <div class="sem" id="sem">
@@ -212,7 +206,7 @@
       <div class="flex">
         <div class="title"><span>7</span><b>Простых шагов</b><small>к дому вашей мечты</small></div>
         <div class="item"><span>1</span>
-          <div class="desk"><a href="#callback" data-toggle="modal">Оставьте заявку</a> на нашем сайте или позвоните по
+          <div class="desk"><a href="#dover">Оставьте заявку</a> на нашем сайте или позвоните по
             номеру телефона <a href="tel:+74991131320"><b>+7 (499) 113-13-20.</b></a></div>
         </div>
         <div class="item"><span>2</span>
@@ -259,8 +253,7 @@
               type="submit" value="Отправить заявку">
             <div class="ili"><span>или позвоните нам: <a href="tel:+74991131320">+7 (499) 113-13-20</a></span></span>
             </div>
-          </div><label class="checkbox"><input checked type="checkbox"> <span class="checkbox__text">Согласие с <a
-                href="#pol" data-toggle="modal">политикой конфиденциальности</a></span></label>
+          </div>
         </form>
       </div>
     </div>
@@ -278,8 +271,7 @@
                   href="mailto:info@kelohome.ru">info@kelohome.ru</a></span></li>
           </ul>
           <div class="vopr">
-            <div class="title">У вас остались вопросы?</div><a class="btn_yell" href="#callback"
-              data-toggle="modal">Задайте их менеджеру</a>
+            <div class="title">У вас остались вопросы?</div><a class="btn_yell" href="tel:+74991131320">Задайте их менеджеру</a>
           </div>
           <div class="inn">
             <p>Обсудите все нюансы с нашей командой профессионалов! Мы ответим на любые ваши вопросы и создадим вместе Ваш дом мечты!</p>
@@ -297,12 +289,11 @@
     <div class="container">
       <div class="flex">
         <div class="logo"><img src="images/logo.webp" alt="логотип Kelo Home"></div>
-        <div class="los">СТРОИМ МНОГО! 1000+ загородных домов</div><a href="#pol"
-          data-toggle="modal">Политика конфиденциальности</a>
+        <div class="los">СТРОИМ МНОГО! 1000+ загородных домов</div>
       </div>
     </div>
   </footer>
-  <div class="modal fade callback_form" id="callback" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- <div class="modal fade callback_form" id="callback" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content"><button class="close" data-dismiss="modal" aria-label="Close" type="button"><span
             aria-hidden="true">×</span></button>
@@ -318,9 +309,7 @@
               <div class="inputs"><input type="text" placeholder="Ваш номер телефона:" name="phone"> <input type="text"
                   hidden name="button" value="Телефон"></div>
               <div class="submit"><input class="btn_red" type="submit" value="Отправить заявку" onsubmit="return ym(0,"
-                  reachGoal","APPLICATION",goalParams),!0"></div><label class="checkbox"><input checked type="checkbox">
-                <span class="checkbox__text">Согласие с <a href="#pol" data-toggle="modal">политикой
-                    конфиденциальности</a></span></label>
+                  reachGoal","APPLICATION",goalParams),!0"></div>
             </form>
           </div>
         </div>
@@ -345,9 +334,7 @@
                   hidden name="button" value="Телефон"> <input type="text" hidden name="otvet1" value> <input
                   type="text" hidden name="otvet2" value> <input type="text" hidden name="otvet3" value> <input
                   type="text" hidden name="otvet4" value> <input type="text" hidden name="otvet5" value></div>
-              <div class="submit"><input class="btn_red" type="submit" value="Отправить заявку"></div><label
-                class="checkbox"><input checked type="checkbox"> <span class="checkbox__text">Согласие с <a href="#pol"
-                    data-toggle="modal">политикой конфиденциальности</a></span></label>
+              <div class="submit"><input class="btn_red" type="submit" value="Отправить заявку"></div>
             </form>
           </div>
         </div>
@@ -370,9 +357,7 @@
               <div class="inputs"><input type="text" placeholder="Введите Ваше имя:" name="name"><input type="text"
                   placeholder="Ваш номер телефона:" name="phone"><input type="text" hidden name="button"
                   value="Телефон"></div>
-              <div class="submit"><input class="btn_red" type="submit" value="Отправить заявку"></div><label
-                class="checkbox"><input checked type="checkbox"> <span class="checkbox__text">Согласие с <a href="#pol"
-                    data-toggle="modal">политикой конфиденциальности</a></span></label>
+              <div class="submit"><input class="btn_red" type="submit" value="Отправить заявку"></div>
             </form>
           </div>
         </div>
@@ -537,7 +522,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <script src="js/libs.min.js"></script>
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/common.js"></script>
