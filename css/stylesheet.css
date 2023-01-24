@@ -1,7 +1,1 @@
-@font-face {
-	font-display: swap;
-	font-family: 'Proxima Nova Lt';
-	src: url('../fonts/ProximaNova-Semibold.eot');
-	font-weight: 600;
-	font-style: normal;
-}
+@font-face{font-display:swap;font-family:'Proxima Nova Lt';src:url(../fonts/ProximaNova-Semibold.eot);font-weight:600;font-style:normal}
