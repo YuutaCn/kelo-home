@@ -304,7 +304,8 @@ header::before {
 @media (max-width: 500px) {
   header {
     min-height: 1px;
-    background: url("../images/header.webp") no-repeat top center;
+    background: url("../images/header_mob.webp") no-repeat top center;
+    background-size: cover;
     padding-bottom: 50px;
   }
 }
