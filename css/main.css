@@ -334,6 +334,8 @@ header .top {
   }
 
   header .top {
+    background: #ffffff96;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.295);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -342,6 +344,8 @@ header .top {
     width: 100%;
     padding-left: 15px;
     padding-right: 15px;
+    padding-bottom: 0;
+    backdrop-filter: blur(2px);
     z-index: 999999999;
   }
 
@@ -442,12 +446,7 @@ header .top .logo img {
   }
 
   header .top .btn_yell {
-    width: 80%;
-    height: auto;
-    position: fixed;
-    bottom: 15px;
-    left: 0;right: 0;
-    margin: auto;
+    display: none;
   }
 }
 
@@ -573,6 +572,7 @@ header .bottom .desk {
 
 header .bottom .desk .btn_red {
   margin-top: 20px;
+  margin-bottom: 20px;
   width: 100%;
 }
 
@@ -643,7 +643,7 @@ header .bottom .desk .podarok i {
 
 @media (max-width: 500px) {
   .god {
-    margin-top: 40px;
+    margin-top: -90px;
   }
 }
 
@@ -1135,8 +1135,8 @@ h2.title span {
   .gal .guest {
     background: none;
     text-align: center;
-    padding-bottom: 100px;
-    padding-top: 100px;
+    padding-bottom: 50px;
+    padding-top: 30px;
   }
 }
 
@@ -1213,8 +1213,14 @@ h2.title span {
 
 .priem {
   background: #F1F9FF;
-  padding-top: 90px;
+  padding-top: 40px;
   padding-bottom: 400px;
+}
+
+@media screen and (max-width: 767px) {
+  .priem {
+    padding-bottom: 300px;
+  }
 }
 
 .priem h2 {
@@ -1925,7 +1931,7 @@ input[type="text"]:-ms-input-placeholder {
 }
 
 .dover {
-  margin-top: 90px;
+  margin-top: 40px;
 }
 
 .dover h2 {
@@ -2139,7 +2145,6 @@ footer .flex .los {
 
 @media (max-width: 1200px) {
   footer .flex .los {
-    padding-bottom: 50px;
   }
 }
 
@@ -2832,7 +2837,8 @@ footer .flex a {
     justify-content: center;
     align-items: center;
     top: 0;left: 0;
-    background: #ffffffe0;
+    background: #ffffff96;
+    backdrop-filter: blur(2px);
     z-index: 9999999;
     width: 100%;
     height: 100%;
