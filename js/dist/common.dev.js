@@ -60,7 +60,7 @@ $(function () {
       t.preventDefault();
       var o = e(this);
       console.log(o), e.ajax({
-        url: "mail.php",
+        // url: "mail.php",
         type: "POST",
         data: o.serialize(),
         success: function success(t) {

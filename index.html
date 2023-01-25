@@ -9,7 +9,7 @@
   <meta name="keywords" content>
   <link rel="preload" as="image" href="images/logo.webp" type="image/webp">
   <link rel="preload" as="image" href="images/header_mob.webp" type="image/webp">
-  <link rel="stylesheet" href="css/main.min.css?v=1">
+  <link rel="stylesheet" href="css/main.css?v=1">
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.webp">
   <link rel="icon" type="image/webp" sizes="32x32" href="favicon/favicon-32x32.webp">
   <link rel="icon" type="image/webp" sizes="16x16" href="favicon/favicon-16x16.webp">
@@ -36,21 +36,21 @@
         <a class="btn_yell" href="#callback" data-toggle="modal">Получить консультацию</a>
       </div>
 
-      
-  <div class="burger-menu" id="burger-menu" data-menu-overlay data-menu="">
-    <div class="burger-menu__container">
-      <nav class="nav burger-menu__nav" title="Navigation">
-        <ul class="burger-menu__nav-list list-reset">
-          <li><a class="yak" data-menu-item="" href="/">Главная</a></li>
-          <li><a class="yak" data-menu-item="" href="#god">О нас</a></li>
-          <li><a class="yak" data-menu-item="" href="#project">Услуги</a></li>
-          <li><a class="yak" data-menu-item="" href="#priem">Преимущества</a></li>
-          <li><a class="yak" data-menu-item="" href="#gal">Галерея</a></li>
-          <li><a class="yak" data-menu-item="" href="#dover">Контакты</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
+
+      <div class="burger-menu" id="burger-menu" data-menu-overlay data-menu="">
+        <div class="burger-menu__container">
+          <nav class="nav burger-menu__nav" title="Navigation">
+            <ul class="burger-menu__nav-list list-reset">
+              <li><a class="yak" data-menu-item="" href="/">Главная</a></li>
+              <li><a class="yak" data-menu-item="" href="#god">О нас</a></li>
+              <li><a class="yak" data-menu-item="" href="#project">Услуги</a></li>
+              <li><a class="yak" data-menu-item="" href="#priem">Преимущества</a></li>
+              <li><a class="yak" data-menu-item="" href="#gal">Галерея</a></li>
+              <li><a class="yak" data-menu-item="" href="#dover">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
 
       <nav class="menu">
         <ul>
@@ -67,9 +67,9 @@
         <h3>Изготавливаем из карельской сосны срубы деревянных домов и бань по проектам заказчика. Так же наши
           архитекторы могут помочь в проектировке дома/дачи, дизайне и отделке.</h3>
         <div class="desk">
-          <p>Получите персональный расчет стоимости строительства дома вашей мечты, а также дополнительную скидку 5% на все материалы и работы!</p><a class="btn_red" href="#qwiz"
-            data-toggle="modal">Заказать расчет</a>
-            <div class="podarok"><i class="icon-s-podarok"></i><span>+ получить гарантированный подарок</span></div>
+          <p>Получите персональный расчет стоимости строительства дома вашей мечты, а также дополнительную скидку 5% на
+            все материалы и работы!</p><a class="btn_red" href="#qwiz" data-toggle="modal">Заказать расчет</a>
+          <div class="podarok"><i class="icon-s-podarok"></i><span>+ получить гарантированный подарок</span></div>
         </div>
       </div>
     </div>
@@ -282,19 +282,38 @@
         <div class="sub">Оставьте заявку, и наш специалист предложит вам несколько вариантов проектов, расскажет<br>о
           технологиях строительства и рассчитает точную стоимость вашего дома!</div>
         <div class="sposob">Выберите удобный способ связи:</div>
-        <form class="send-form">
-          <div class="buttons"><button class="active"><i
-                class="icon-s-phone"></i><span>Телефон</span></button><button><i
-                class="icon-s-what"></i><span>WhatsApp</span></button><button><i
-                class="icon-s-teleg"></i><span>Telegram</span></button></div>
-          <div class="inputs"><input type="text" placeholder="Введите Ваше имя:" name="name"> <input type="text"
-              placeholder="Ваш номер телефона:" name="phone"> <input type="text" hidden name="button" value="Телефон">
+
+        <form class="send-form sposob">
+
+          <div class="buttons">
+            <button class="active">
+              <i class="icon-s-phone"></i><span>Телефон</span>
+            </button>
+            <button>
+              <i class="icon-s-what"></i><span>WhatsApp</span>
+            </button>
+            <button>
+              <i class="icon-s-teleg"></i><span>Telegram</span>
+            </button>
           </div>
-          <div class="submit"><input class="btn_red" value='Отправить заявку'>
-            <div class="ili"><span>или позвоните нам: <a href="tel:+74991131320">+7 (499) 113-13-20</a></span>
+
+          <div class="inputs">
+            <input class="sposob__name" type="text" placeholder="Введите Ваше имя:" name="name">
+            <input class="sposob__tel" type="text" placeholder="Ваш номер телефона:" name="phone">
+          </div>
+
+          <div class="submit">
+            <button class="btn_red">Отправить заявку</button>
+
+            <div class="ili">
+              <span>или позвоните нам:<a href="tel:+74991131320">+7 (499) 113-13-20</a>
+              </span>
             </div>
           </div>
+
         </form>
+
+
       </div>
     </div>
   </div>
@@ -348,8 +367,9 @@
                     class="icon-s-teleg"></i><span>Telegram</span></button></div>
               <div class="inputs"><input type="text" placeholder="Ваш номер телефона:" name="phone"> <input type="text"
                   hidden name="button" value="Телефон"></div>
-              <div class="submit"><input class="btn_red" type="submit" value="Отправить заявку" onsubmit="return ym(0,"
-                  reachGoal","APPLICATION",goalParams),!0"></div>
+              <div class="submit">
+                <button class="btn_red" type="submit">Отправить заявку</button>
+              </div>
             </form>
           </div>
         </div>
@@ -374,7 +394,9 @@
                   hidden name="button" value="Телефон"> <input type="text" hidden name="otvet1" value> <input
                   type="text" hidden name="otvet2" value> <input type="text" hidden name="otvet3" value> <input
                   type="text" hidden name="otvet4" value> <input type="text" hidden name="otvet5" value></div>
-              <div class="submit"><input class="btn_red" type="submit" value="Отправить заявку"></div>
+              <div class="submit">
+                <button class="btn_red" type="submit">Отправить заявку</button>
+              </div>
             </form>
           </div>
         </div>
@@ -397,7 +419,9 @@
               <div class="inputs"><input type="text" placeholder="Введите Ваше имя:" name="name"><input type="text"
                   placeholder="Ваш номер телефона:" name="phone"><input type="text" hidden name="button"
                   value="Телефон"></div>
-              <div class="submit"><input class="btn_red" type="submit" value="Отправить заявку"></div>
+              <div class="submit">
+                <button class="btn_red" type="submit">Отправить заявку</button>
+              </div>
             </form>
           </div>
         </div>
@@ -571,6 +595,8 @@
   <script defer src="js/jquery.fancybox.min.js"></script>
   <script defer src="js/common.js"></script>
   <script defer src="js/burger.min.js"></script>
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  <script defer src="js/form-validate.js"></script>
   <script defer src="js/map.min.js"></script>
 </body>
 

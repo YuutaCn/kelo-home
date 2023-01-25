@@ -305,7 +305,7 @@ header::before {
   header {
     min-height: 1px;
     background: url("../images/header_mob.webp") no-repeat top center;
-    background-size: cover;
+    background-size: 100% 542px;
     padding-bottom: 50px;
   }
 }
@@ -355,11 +355,12 @@ header .top {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 35px;
-    height: 45px;
+    width: 28px;
+    height: 33px;
     background: transparent;
     border: none;
     cursor: pointer;
+    order: 3;
   }
 
   .burger.burger--active span {
@@ -367,10 +368,10 @@ header .top {
     height: 0px;
   }
   .burger.burger--active::before {
-    transform: rotate(45deg) translate3d(8px, 7px, 0);
+    transform: rotate(45deg) translate3d(7px, 6px, 0);
   }
   .burger.burger--active::after {
-    transform: rotate(-45deg) translate3d(10px, -8px, 0);
+    transform: rotate(-45deg) translate3d(6px, -5px, 0);
   }
 
   .burger span {
@@ -436,13 +437,14 @@ header .top .logo img {
     -webkit-flex-grow: 0;
     -ms-flex-positive: 0;
     flex-grow: 0;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 50px;
   }
   header .top .logo img{
     width: 100%;
     height: 100%;
     object-fit: contain;
+    order: 1;
   }
 
   header .top .btn_yell {
@@ -469,7 +471,7 @@ header .top .phone {
 
 @media (max-width: 767px) {
   header .top .phone {
-    display: none;
+    order: 2;
   }
 }
 
@@ -479,6 +481,12 @@ header .top .phone a {
   color: #000000;
   font-family: 'Lora', serif;
   font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+  header .top .phone a {
+    font-size: 16px;
+  }
 }
 
 header .top .phone span {
@@ -509,7 +517,7 @@ header .bottom h1 {
 @media (max-width: 767px) {
   header .bottom h1 {
     text-align: center;
-    margin-top: 90px;
+    margin-top: 47px;
   }
 
   header .bottom h1 br {
@@ -561,6 +569,8 @@ header .bottom .desk {
   header .bottom .desk {
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    top: 100px;
   }
 }
 
@@ -643,7 +653,7 @@ header .bottom .desk .podarok i {
 
 @media (max-width: 500px) {
   .god {
-    margin-top: -90px;
+    margin-top: 35px;
   }
 }
 
@@ -2759,7 +2769,6 @@ footer .flex a {
 }
 
 #qwiz .modal-dialog .flex_form .left .vopros .otvet .item .desk {
-  margin-top: 15px;
   position: relative;
   padding-left: 35px;
   font-family: 'Lora', serif;
@@ -2836,12 +2845,12 @@ footer .flex a {
     position: fixed;
     justify-content: center;
     align-items: center;
-    top: 0;left: 0;
+    top: 50px;left: 0;
     background: #ffffff96;
     backdrop-filter: blur(2px);
     z-index: 9999999;
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 50px);
     transform: translateX(-100%);
   }
   .burger-menu.menu--active {
