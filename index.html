@@ -281,32 +281,33 @@
         <h2 class="title">Узнайте, <span>сколько стоит</span> ваш дом!</h2>
         <div class="sub">Оставьте заявку, и наш специалист предложит вам несколько вариантов проектов, расскажет<br>о
           технологиях строительства и рассчитает точную стоимость вашего дома!</div>
-        <div class="sposob">Выберите удобный способ связи:</div>
+          <!-- <div class="sposob">Выберите удобный способ связи:</div> -->
+          <div class="sposob">Заполните форму:</div>
 
-        <form class="send-form sposob">
+        <form class="send-form" id="sposob-form">
 
-          <div class="buttons">
-            <button class="active">
+          <!-- <div class="buttons">
+            <button class="change-sposob active">
               <i class="icon-s-phone"></i><span>Телефон</span>
             </button>
-            <button>
+            <button class="change-sposob">
               <i class="icon-s-what"></i><span>WhatsApp</span>
             </button>
-            <button>
+            <button class="change-sposob">
               <i class="icon-s-teleg"></i><span>Telegram</span>
             </button>
-          </div>
+          </div> -->
 
           <div class="inputs">
-            <input class="sposob__name" type="text" placeholder="Введите Ваше имя:" name="name">
-            <input class="sposob__tel" type="text" placeholder="Ваш номер телефона:" name="phone">
+            <input class="_req _name sposob-form-name" type="text" placeholder="Введите Ваше имя:" name="name">
+            <input class="_req _tel phone sposob-form-tel" type="text" placeholder="Ваш номер телефона:" name="phone">
           </div>
 
           <div class="submit">
-            <button class="btn_red">Отправить заявку</button>
+            <button type="submit" class="btn_red">Отправить заявку</button>
 
             <div class="ili">
-              <span>или позвоните нам:<a href="tel:+74991131320">+7 (499) 113-13-20</a>
+              <span>или позвоните нам: <a href="tel:+74991131320">+7 (499) 113-13-20</a>
               </span>
             </div>
           </div>
@@ -360,16 +361,18 @@
           <div class="form">
             <div class="title">Оставьте заявку на<br><span>бесплатную</span> консультацию</div>
             <div class="sub">и наш менеджер перезвонит вам в течение 5 минут!</div>
-            <form class="send-form">
-              <div class="buttons"><button class="active"><i
-                    class="icon-s-phone"></i><span>Телефон</span></button><button><i
-                    class="icon-s-what"></i><span>WhatsApp</span></button><button><i
-                    class="icon-s-teleg"></i><span>Telegram</span></button></div>
-              <div class="inputs"><input type="text" placeholder="Ваш номер телефона:" name="phone"> <input type="text"
-                  hidden name="button" value="Телефон"></div>
-              <div class="submit">
-                <button class="btn_red" type="submit">Отправить заявку</button>
+
+            <form class="send-form" id="modal-form">
+    
+              <div class="inputs">
+                <input class="_req _name modal-form-name" type="text" placeholder="Введите Ваше имя:" name="name">
+                <input class="_req _tel phone modal-form-tel" type="text" placeholder="Ваш номер телефона:" name="phone">
               </div>
+    
+              <div class="submit">
+                <button type="submit" class="btn_red">Отправить заявку</button>
+              </div>
+    
             </form>
           </div>
         </div>
@@ -385,19 +388,19 @@
             <div class="title">Спасибо за <span>Ваши ответы!</span></div>
             <div class="sub">Оставьте контактные данные и получите точный расчет суммы строительства уже через несколько
               минут</div>
-            <form class="send-form">
-              <div class="buttons"><button class="active"><i
-                    class="icon-s-phone"></i><span>Телефон</span></button><button><i
-                    class="icon-s-what"></i><span>WhatsApp</span></button><button><i
-                    class="icon-s-teleg"></i><span>Telegram</span></button></div>
-              <div class="inputs"><input type="text" placeholder="Ваш номер телефона:" name="phone"> <input type="text"
-                  hidden name="button" value="Телефон"> <input type="text" hidden name="otvet1" value> <input
-                  type="text" hidden name="otvet2" value> <input type="text" hidden name="otvet3" value> <input
-                  type="text" hidden name="otvet4" value> <input type="text" hidden name="otvet5" value></div>
-              <div class="submit">
-                <button class="btn_red" type="submit">Отправить заявку</button>
-              </div>
-            </form>
+
+              <form class="send-form" id="otvet-form">
+      
+                <div class="inputs">
+                  <input class="_req _name otvet-form-name" type="text" placeholder="Введите Ваше имя:" name="name">
+                  <input class="_req _tel phone otvet-form-tel" type="text" placeholder="Ваш номер телефона:" name="phone">
+                </div>
+      
+                <div class="submit">
+                  <button type="submit" class="btn_red">Отправить заявку</button>
+                </div>
+      
+              </form>
           </div>
         </div>
       </div>
@@ -591,11 +594,11 @@
   <link rel="stylesheet" href="css/stylesheet.css">
   <link rel="stylesheet" href="css/libs.min.css">
   <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-  <script defer src="js/libs.min.js"></script>
-  <script defer src="js/jquery.fancybox.min.js"></script>
-  <script defer src="js/common.js"></script>
+  <script defer src="js/libs/libs.min.js"></script>
+  <script defer src="js/libs/jquery.fancybox.min.js"></script>
+  <script defer src="js/libs/just-validate.min.js"></script>
+  <script defer src="js/libs/inputmask.min.js"></script>
   <script defer src="js/burger.min.js"></script>
-  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
   <script defer src="js/form-validate.js"></script>
   <script defer src="js/map.min.js"></script>
 </body>

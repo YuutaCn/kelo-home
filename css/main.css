@@ -1636,6 +1636,7 @@ img[data-src] {
 }
 
 .form {
+  position: relative;
   background: url("../images/god_bg.webp") no-repeat center center;
   -webkit-background-size: 100% 100%;
   background-size: 100% 100%;
@@ -1812,10 +1813,22 @@ img[data-src] {
   width: calc(50% - 10px);
 }
 
+.form form .inputs input._error {
+  border: solid 1px #E22216;
+}
+
+.form form .inputs input._error::placeholder {
+  color: #E22216;
+}
+
 @media (max-width: 767px) {
   .form form .inputs input {
     width: 100%;
   }
+}
+
+._pending {
+  pointer-events: none;
 }
 
 .form form .submit {
