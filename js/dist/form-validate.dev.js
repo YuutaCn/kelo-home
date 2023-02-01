@@ -1,6 +1,7 @@
 "use strict";
 
 document.addEventListener('DOMContentLoaded', function () {
+  window.alert = console.log;
   var form = document.getElementById('sposob-form');
   var formModal = document.getElementById('modal-form');
   var formOtvet = document.getElementById('otvet-form');
@@ -86,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
             formData = new FormData(form);
 
             if (!(error === 0)) {
-              _context2.next = 22;
+              _context2.next = 23;
               break;
             }
 
@@ -101,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
             response = _context2.sent;
 
             if (!response.ok) {
-              _context2.next = 18;
+              _context2.next = 19;
               break;
             }
 
@@ -113,22 +114,26 @@ document.addEventListener('DOMContentLoaded', function () {
             alert(result.message);
             form.reset();
             form.classList.remove('_pending');
-            showSenk();
-            _context2.next = 21;
+            document.getElementById('callback').classList.remove('show');
+            setTimeout(function () {
+              document.getElementById('callback').style.display = 'none';
+              showSenk();
+            }, 500);
+            _context2.next = 22;
             break;
 
-          case 18:
+          case 19:
             alert('Ошибка');
             form.classList.remove('_pending');
             showSenk();
-
-          case 21:
-            ;
 
           case 22:
             ;
 
           case 23:
+            ;
+
+          case 24:
           case "end":
             return _context2.stop();
         }
@@ -149,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function () {
             formData = new FormData(form);
 
             if (!(error === 0)) {
-              _context3.next = 22;
+              _context3.next = 23;
               break;
             }
 
@@ -164,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function () {
             response = _context3.sent;
 
             if (!response.ok) {
-              _context3.next = 18;
+              _context3.next = 19;
               break;
             }
 
@@ -176,22 +181,26 @@ document.addEventListener('DOMContentLoaded', function () {
             alert(result.message);
             form.reset();
             form.classList.remove('_pending');
-            showSenk();
-            _context3.next = 21;
+            document.getElementById('otvet').classList.remove('show');
+            setTimeout(function () {
+              document.getElementById('otvet').style.display = 'none';
+              showSenk();
+            }, 500);
+            _context3.next = 22;
             break;
 
-          case 18:
+          case 19:
             alert('Ошибка');
             form.classList.remove('_pending');
             showSenk();
-
-          case 21:
-            ;
 
           case 22:
             ;
 
           case 23:
+            ;
+
+          case 24:
           case "end":
             return _context3.stop();
         }
@@ -324,12 +333,6 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(function () {
       document.querySelector('#senk').classList.add('show');
     }, 500);
-    setTimeout(function () {
-      document.querySelector('#senk').classList.remove('show');
-      setTimeout(function () {
-        document.querySelector('#senk').style.display = 'none';
-      }, 500);
-    }, 2000);
   }
 
   ;
@@ -388,4 +391,13 @@ $(function () {
       }, 1100), !1;
     });
   });
+});
+document.getElementById('senk').addEventListener('click', function (el) {
+  document.getElementById('senk').classList.remove('show');
+  document.querySelector('body').classList.remove('modal-open');
+  document.querySelector('.modal-backdrop').classList.remove('show');
+  setTimeout(function () {
+    document.getElementById('senk').style.display = 'none';
+    document.querySelector('.modal-backdrop').style.display = 'none';
+  }, 500);
 });

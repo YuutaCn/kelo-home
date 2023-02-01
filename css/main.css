@@ -71,10 +71,9 @@ a:hover {
   display: inline-block;
 }
 
-* {
-  outline: none !important;
-  position: relative;z-index: 1;
-}
+ * {
+  outline: none !important;z-index: 1;
+}  
 
 .mob-menu {
   display: none;
@@ -285,10 +284,29 @@ select::-ms-expand {
 header {
   position: relative;
   background: url("../images/header.webp") no-repeat bottom center;
-  min-height: 1500px;
+  background-position: center 72%;
+  min-height: 1000px;
   -webkit-background-size: cover;
   background-size: cover;
   padding-top: 25px;
+}
+
+@media screen and (max-width: 1919px) {
+  header {
+    background: url("../images/header.webp") no-repeat bottom center;
+    background-position: center 80%;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  header {
+    background: url("../images/header.webp") no-repeat bottom center;
+    background-position: center -200px;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
 }
 
 header::before {
@@ -297,7 +315,7 @@ header::before {
   width: 100%;
   height: 100%;
   top: 0;left: 0;
-  background: #ffffff45;
+  background: linear-gradient(186deg, rgba(255, 255, 255, 0.6) 0%, rgba(255,255,255,.6) 62%, rgba(255,255,255,0) 100%);
   z-index: 0;
 }
 
@@ -308,7 +326,11 @@ header::before {
     background-size: 100% 542px;
     padding-bottom: 50px;
   }
-}
+} 
+
+header .container {
+    position: relative;
+    }
 
 header .top {
   display: -webkit-box;
@@ -345,8 +367,17 @@ header .top {
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 0;
+    -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
     z-index: 999999999;
+  }
+
+  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    header .top {
+      -webkit-backdrop-filter: blur(2px);
+      backdrop-filter: blur(2px);
+      background-color: #ffffff73;  
+    }
   }
 
   .burger {
@@ -1813,14 +1844,6 @@ img[data-src] {
   width: calc(50% - 10px);
 }
 
-.form form .inputs input._error {
-  border: solid 1px #E22216;
-}
-
-.form form .inputs input._error::placeholder {
-  color: #E22216;
-}
-
 @media (max-width: 767px) {
   .form form .inputs input {
     width: 100%;
@@ -1926,7 +1949,9 @@ img[data-src] {
   white-space: nowrap;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="name"],
+input[type="tel"] {
   padding: 20px;
   font-size: 16px;
   color: #363C40;
@@ -1937,19 +1962,23 @@ input[type="text"] {
   margin-bottom: 10px;
 }
 
-input[type="text"]::-webkit-input-placeholder {
+input[type="text"]::-webkit-input-placeholder,
+input[type="tel"]::-webkit-input-placeholder {
   opacity: 1;
 }
 
-input[type="text"]:-moz-placeholder {
+input[type="text"]:-moz-placeholder,
+input[type="tel"]:-moz-placeholder {
   opacity: 1;
 }
 
-input[type="text"]::-moz-placeholder {
+input[type="text"]::-moz-placeholder,
+input[type="tel"]::-moz-placeholder {
   opacity: 1;
 }
 
-input[type="text"]:-ms-input-placeholder {
+input[type="text"]:-ms-input-placeholder,
+input[type="tel"]:-ms-input-placeholder {
   opacity: 1;
 }
 
@@ -2202,11 +2231,12 @@ footer .flex a {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  z-index: 999999999;
 }
 
 #senk .close {
   position: absolute;
-  z-index: 3;
+  z-index: 9999999999;
   right: 18px;
   font-weight: 300;
   font-size: 40px;
@@ -2860,12 +2890,21 @@ footer .flex a {
     align-items: center;
     top: 50px;left: 0;
     background: #ffffff96;
+    -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
     z-index: 9999999;
     width: 100%;
     height: calc(100vh - 50px);
     transform: translateX(-100%);
   }
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .burger-menu {
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    background-color: #ffffff73;  
+  }
+}
   .burger-menu.menu--active {
     opacity: 1;
     visibility: visible;
@@ -2906,7 +2945,6 @@ footer .flex a {
   }
 
 
-
   /* .burger-menu__nav li a::before {
     content: '';
     position: absolute;
@@ -2917,4 +2955,24 @@ footer .flex a {
     border-radius: 50px;
     background: #000;
   } */
+}
+
+body>div:nth-child(1) {
+    z-index: 999999999 !important;
+}
+
+.b24-widget-button-wrapper{
+  z-index: 9999999999 !important;
+}
+
+.b24-widget-button-shadow {
+  z-index: 999999999 !important;
+}
+
+.bx-livechat-help-container {
+  z-index: 99999999999999 !important;
+}
+
+body>div:nth-child(2) {
+    z-index: 999999999999999999 !important;
 }

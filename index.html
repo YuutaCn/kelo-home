@@ -9,7 +9,7 @@
   <meta name="keywords" content>
   <link rel="preload" as="image" href="images/logo.webp" type="image/webp">
   <link rel="preload" as="image" href="images/header_mob.webp" type="image/webp">
-  <link rel="stylesheet" href="css/main.css?v=1">
+  <link rel="stylesheet" href="css/main.css?v=3">
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.webp">
   <link rel="icon" type="image/webp" sizes="32x32" href="favicon/favicon-32x32.webp">
   <link rel="icon" type="image/webp" sizes="16x16" href="favicon/favicon-16x16.webp">
@@ -19,6 +19,27 @@
   <meta name="msapplication-TileColor" content="#188418">
   <meta name="msapplication-config" content="favicon/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+      m[i].l = 1 * new Date();
+      for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(92228147, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true
+    });
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/92228147" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
 </head>
 
 <body>
@@ -281,39 +302,25 @@
         <h2 class="title">Узнайте, <span>сколько стоит</span> ваш дом!</h2>
         <div class="sub">Оставьте заявку, и наш специалист предложит вам несколько вариантов проектов, расскажет<br>о
           технологиях строительства и рассчитает точную стоимость вашего дома!</div>
-          <!-- <div class="sposob">Выберите удобный способ связи:</div> -->
-          <div class="sposob">Заполните форму:</div>
+        <!-- <div class="sposob">Выберите удобный способ связи:</div> -->
+        <div class="sposob">Заполните форму:</div>
 
-        <form class="send-form" id="sposob-form">
 
-          <!-- <div class="buttons">
-            <button class="change-sposob active">
-              <i class="icon-s-phone"></i><span>Телефон</span>
-            </button>
-            <button class="change-sposob">
-              <i class="icon-s-what"></i><span>WhatsApp</span>
-            </button>
-            <button class="change-sposob">
-              <i class="icon-s-teleg"></i><span>Telegram</span>
-            </button>
-          </div> -->
-
+        <form class="send-form" id="sposob-form" method="post">
           <div class="inputs">
-            <input class="_req _name sposob-form-name" type="text" placeholder="Введите Ваше имя:" name="name">
-            <input class="_req _tel phone sposob-form-tel" type="text" placeholder="Ваш номер телефона:" name="phone">
+            <input type="text" minlength="3" class="sposob-form-name" name="name" placeholder="Введите Ваше имя:"
+              value="" required><br>
+            <input type="tel" minlength="18" class="phone-mask sposob-form-tel" name="phone"
+              placeholder="Ваш номер телефона:" value="" required><br>
           </div>
-
           <div class="submit">
-            <button type="submit" class="btn_red">Отправить заявку</button>
-
+            <button class="btn_red">Отправить</button>
             <div class="ili">
               <span>или позвоните нам: <a href="tel:+74991131320">+7 (499) 113-13-20</a>
               </span>
             </div>
           </div>
-
         </form>
-
 
       </div>
     </div>
@@ -362,18 +369,18 @@
             <div class="title">Оставьте заявку на<br><span>бесплатную</span> консультацию</div>
             <div class="sub">и наш менеджер перезвонит вам в течение 5 минут!</div>
 
-            <form class="send-form" id="modal-form">
-    
+            <form class="send-form" id="modal-form" method="post">
               <div class="inputs">
-                <input class="_req _name modal-form-name" type="text" placeholder="Введите Ваше имя:" name="name">
-                <input class="_req _tel phone modal-form-tel" type="text" placeholder="Ваш номер телефона:" name="phone">
+                <input type="text" minlength="3" class="sposob-form-name" name="name" placeholder="Введите Ваше имя:"
+                  value="" required><br>
+                <input type="tel" minlength="18" class="phone-mask sposob-form-tel" name="phone"
+                  placeholder="Ваш номер телефона:" value="" required><br>
               </div>
-    
               <div class="submit">
-                <button type="submit" class="btn_red">Отправить заявку</button>
+                <button class="btn_red">Отправить заявку</button>
               </div>
-    
             </form>
+
           </div>
         </div>
       </div>
@@ -389,18 +396,19 @@
             <div class="sub">Оставьте контактные данные и получите точный расчет суммы строительства уже через несколько
               минут</div>
 
-              <form class="send-form" id="otvet-form">
-      
-                <div class="inputs">
-                  <input class="_req _name otvet-form-name" type="text" placeholder="Введите Ваше имя:" name="name">
-                  <input class="_req _tel phone otvet-form-tel" type="text" placeholder="Ваш номер телефона:" name="phone">
-                </div>
-      
-                <div class="submit">
-                  <button type="submit" class="btn_red">Отправить заявку</button>
-                </div>
-      
-              </form>
+            <form class="send-form" id="otvet-form" method="post">
+              <div id="otvet-form-vvod"></div>
+              <div class="inputs">
+                <input type="text" minlength="3" class="sposob-form-name" name="name" placeholder="Введите Ваше имя:"
+                  value="" required><br>
+                <input type="tel" minlength="18" class="phone-mask sposob-form-tel" name="phone"
+                  placeholder="Ваш номер телефона:" value="" required><br>
+              </div>
+              <div class="submit">
+                <button class="btn_red">Отправить заявку</button>
+              </div>
+            </form>
+
           </div>
         </div>
       </div>
@@ -450,7 +458,7 @@
       <div class="modal-content">
         <div class="modal-body"><button class="close" data-dismiss="modal" aria-label="Close" type="button"><span
               aria-hidden="true">×</span></button>
-          <div class="flex_form">
+          <form class="flex_form" id="quiz-form">
             <div class="left">
               <div class="title">Ответьте на 5 <span>коротких вопросов</span></div>
               <div class="sub">и получите точный расчет стоимости строительства уже через несколько минут</div>
@@ -460,124 +468,149 @@
                 <div class="title_vopros">Вопрос 1:</div>
                 <div class="sub_vopros">Какой тип дома Вам необходим?</div>
                 <div class="otvet">
-                  <div class="item">
-                    <!-- <div class="img"><img src="images/logo.webp" data-src="../img/otvet-1-1.webp" alt=""></div> -->
+
+                  <label class="item">
+                    <input type="radio" name="vopros-1" value="1-этажный" style="display: none;">
                     <div class="desk">1-этажный</div>
-                  </div>
-                  <div class="item">
-                    <!-- <div class="img"><img src="images/logo.webp" data-src="../img/otvet-1-2.webp" alt=""></div> -->
+                  </label>
+
+                  <label class="item">
+                    <input type="radio" name="vopros-1" value="2-этажный" style="display: none;">
                     <div class="desk">2-этажный</div>
-                  </div>
-                  <div class="item">
-                    <!-- <div class="img"><img src="images/logo.webp" data-src="../img/otvet-1-3.webp" alt=""></div> -->
+                  </label>
+
+                  <label class="item">
+                    <input type="radio" name="vopros-1" value="С мансардой" style="display: none;">
                     <div class="desk">С мансардой</div>
-                  </div>
-                  <div class="item">
-                    <!-- <div class="img"><img src="images/logo.webp" data-src="../img/otvet-1-4.webp" alt=""></div> -->
+                  </label>
+
+                  <label class="item">
+                    <input type="radio" name="vopros-1" value="До 100 кв.м." style="display: none;">
                     <div class="desk">До 100 кв.м.</div>
-                  </div>
-                  <div class="item">
-                    <!-- <div class="img"><img src="images/logo.webp" data-src="../img/otvet-1-5.webp" alt=""></div> -->
+                  </label>
+
+                  <label class="item">
+                    <input type="radio" name="vopros-1" value="До 150 кв.м." style="display: none;">
                     <div class="desk">До 150 кв.м.</div>
-                  </div>
-                  <div class="item">
-                    <!-- <div class="img"><img src="images/logo.webp" data-src="../img/otvet-1-6.webp" alt=""></div> -->
+                  </label>
+
+                  <label class="item">
+                    <input type="radio" name="vopros-1" value="Хайтек" style="display: none;">
                     <div class="desk">Хайтек</div>
-                  </div>
+                  </label>
+
                 </div><a class="btn_red" href="#">Далее</a>
               </div>
               <div class="vopros item-2">
                 <div class="title_vopros">Вопрос 2:</div>
                 <div class="sub_vopros">Какую кровлю Вы хотите использовать?</div>
                 <div class="otvet">
-                  <div class="item">
-                    <!-- <div class="img"><img data-src="../img/otvet-2-1.webp" alt></div> -->
+
+                  <label class="item">
+                    <input type="radio" name="vopros-2" value="Металлочерепица" style="display: none;">
                     <div class="desk">Металлочерепица</div>
-                  </div>
-                  <div class="item">
-                    <!-- <div class="img"><img data-src="../img/fff.webp" alt></div> -->
+                  </label>
+
+                  <label class="item">
+                    <input type="radio" name="vopros-2" value="Гибкая черепица" style="display: none;">
                     <div class="desk">Гибкая черепица</div>
-                  </div>
+                  </label>
+
                 </div><a class="btn_red" href="#">Далее</a>
               </div>
               <div class="vopros item-3">
                 <div class="title_vopros">Вопрос 3:</div>
                 <div class="sub_vopros">Когда Вы планируете начать строительство?</div>
                 <div class="otvet">
-                  <div class="item">
-                    <!-- <div class="img"><img data-src="../img/otvet-3-1.webp" alt></div> -->
+                  
+                  <label class="item">
+                    <input type="radio" name="vopros-3" value="Как можно быстрее" style="display: none;">
                     <div class="desk">Как можно быстрее</div>
-                  </div>
-                  <div class="item">
-                    <!-- <div class="img"><img data-src="../img/otvet-3-2.webp" alt></div> -->
+                  </label>
+
+                  <label class="item">
+                    <input type="radio" name="vopros-3" value="В течение 2-4 недель" style="display: none;">
                     <div class="desk">В течение 2-4 недель</div>
-                  </div>
-                  <div class="item">
-                    <!-- <div class="img"><img data-src="../img/otvet-3-3.webp" alt></div> -->
+                  </label>
+
+                  <label class="item">
+                    <input type="radio" name="vopros-3" value="В течение 1-3 месяцев" style="display: none;">
                     <div class="desk">В течение 1-3 месяцев</div>
-                  </div>
-                  <div class="item">
-                    <!-- <div class="img"><img data-src="../img/otvet-3-4.webp" alt></div> -->
+                  </label>
+
+                  <label class="item">
+                    <input type="radio" name="vopros-3" value="Примерно через полгода" style="display: none;">
                     <div class="desk">Примерно через полгода</div>
-                  </div>
-                  <div class="item">
-                    <!-- <div class="img"><img data-src="../img/otvet-3-5.webp" alt></div> -->
+                  </label>
+
+                  <label class="item">
+                    <input type="radio" name="vopros-3" value="В этом году" style="display: none;">
                     <div class="desk">В этом году</div>
-                  </div>
-                  <div class="item">
-                    <!-- <div class="img"><img data-src="../img/otvet-3-6.webp" alt></div> -->
+                  </label>
+
+                  <label class="item">
+                    <input type="radio" name="vopros-3" value="В след.году или позже" style="display: none;">
                     <div class="desk">В след.году или позже</div>
-                  </div>
+                  </label>
+
                 </div><a class="btn_red" href="#">Далее</a>
               </div>
               <div class="vopros item-4">
                 <div class="title_vopros">Вопрос 4:</div>
                 <div class="sub_vopros">Какая допкомплектация дома Вам необходима?</div>
                 <div class="otvet">
-                  <div class="item">
-                    <!-- <div class="img"><img data-src="../img/otvet-4-1.webp" alt></div> -->
+
+                  <label class="item">
+                    <input type="checkbox" name="vopros-4[]" value="Сантехника" style="display: none;">
                     <div class="desk">Сантехника</div>
-                  </div>
-                  <div class="item">
-                    <!-- <div class="img"><img data-src="../img/otvet-4-2.webp" alt></div> -->
+                  </label>
+
+                  <label class="item">
+                    <input type="checkbox" name="vopros-4[]" value="Электрика" style="display: none;">
                     <div class="desk">Электрика</div>
-                  </div>
-                  <div class="item">
-                    <!-- <div class="img"><img data-src="../img/otvet-4-3.webp" alt></div> -->
+                  </label>
+
+                  <label class="item">
+                    <input type="checkbox" name="vopros-4[]" value="Канализация" style="display: none;">
                     <div class="desk">Канализация</div>
-                  </div>
-                  <div class="item">
-                    <!-- <div class="img"><img data-src="../img/otvet-4-4.webp" alt></div> -->
-                    <div class="desk">Отделка</div>
-                  </div>
-                  <div class="item">
-                    <!-- <div class="img"><img data-src="../img/otvet-4-5.webp" alt></div> -->
-                    <div class="desk">Ремонт</div>
-                  </div>
-                  <div class="item">
-                    <!-- <div class="img"><img data-src="../img/otvet-4-6.webp" alt></div> -->
+                  </label>
+
+                  <label class="item">
+                    <input type="checkbox" name="vopros-4[]" value="Внешняя отделка" style="display: none;">
+                    <div class="desk">Внешняя отделка</div>
+                  </label>
+
+                  <label class="item">
+                    <input type="checkbox" name="vopros-4[]" value="Внутренняя отделка" style="display: none;">
+                    <div class="desk">Внутренняя отделка</div>
+                  </label>
+
+                  <label class="item">
+                    <input type="checkbox" name="vopros-4[]" value="Скважина" style="display: none;">
                     <div class="desk">Скважина</div>
-                  </div>
+                  </label>
+
                 </div><a class="btn_red" href="#">Далее</a>
               </div>
               <div class="vopros item-5">
                 <div class="title_vopros">Вопрос 5:</div>
                 <div class="sub_vopros">В каком регионе Вы хотите построить дом?</div>
                 <div class="otvet">
-                  <div class="item">
-                    <!-- <div class="img"><img data-src="../img/otvet-5-1.webp" alt></div> -->
+                  <label class="item">
+                    <input type="radio" name="vopros-5" value="Москва" style="display: none;">
                     <div class="desk">Москва</div>
-                  </div>
-                  <div class="item">
-                    <!-- <div class="img"><img data-src="../img/otvet-5-2.webp" alt></div> -->
+                  </label>
+                  <label class="item">
+                    <input type="radio" name="vopros-5" value="Область" style="display: none;">
                     <div class="desk">Область</div>
-                  </div>
-                  <div class="item">
-                    <!-- <div class="img"><img data-src="../img/otvet-5-3.webp" alt></div> -->
+                  </label>
+                  <label class="item">
+                    <input type="radio" name="vopros-5" value="Другой регион" style="display: none;">
                     <div class="desk">Другой регион</div>
-                  </div>
+                  </label>
                 </div><a class="btn_red" href="#">Далее</a>
               </div>
+              
             </div>
             <div class="right">
               <div class="title_right">Получить <span>скидку</span></div>
@@ -586,11 +619,18 @@
               <div class="max"><i class="icon-s-phone_skid"></i><span>Ответьте на все вопросы чтобы<br>получить
                   максимальную скидку</span></div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
   </div>
+
+  <script>
+    (function (w, d, u) {
+      var s = d.createElement('script'); s.async = true; s.src = u + '?' + (Date.now() / 60000 | 0);
+      var h = d.getElementsByTagName('script')[0]; h.parentNode.insertBefore(s, h);
+    })(window, document, 'https://cdn-ru.bitrix24.ru/b23839090/crm/site_button/loader_4_7qn6ho.js');
+  </script>
   <link rel="stylesheet" href="css/stylesheet.css">
   <link rel="stylesheet" href="css/libs.min.css">
   <link rel="stylesheet" href="css/jquery.fancybox.min.css">
@@ -599,8 +639,9 @@
   <script defer src="js/libs/just-validate.min.js"></script>
   <script defer src="js/libs/inputmask.min.js"></script>
   <script defer src="js/burger.min.js"></script>
-  <script defer src="js/form-validate.js"></script>
+  <script defer src="js/quiz.js"></script>
   <script defer src="js/map.min.js"></script>
-</body>
 
+  <script defer src="js/send.js"></script>
+</body>
 </html>
